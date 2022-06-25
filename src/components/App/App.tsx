@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 import PageTitle from '../PageTitle/PageTitle';
 import NumberInput from './NumberInput/NumberInput';
+import OutputPanel from '../OutputPanel/OutputPanel';
 
 function App() {
   const MainBoxStyle = {
@@ -20,6 +22,8 @@ function App() {
     <Box sx={ MainBoxStyle }>
       <PageTitle />
       <NumberInput setNumber={ setNumber } />
+      <Divider />
+      <OutputPanel />
     </Box>
   );
 }
