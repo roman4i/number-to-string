@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import PageTitle from '../PageTitle/PageTitle';
+import NumberInput from './NumberInput/NumberInput';
 
 function App() {
   const MainBoxStyle = {
@@ -13,9 +14,12 @@ function App() {
     padding: 3,
   }
 
+  const [number, setNumber] = useState('');
+
   return (
     <Box sx={ MainBoxStyle }>
       <PageTitle />
+      <NumberInput setNumber={ setNumber } />
     </Box>
   );
 }
