@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Tab, Tabs } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import processUA from '../../utils/toUkrainian';
+import processENG from '../../utils/toEnglish';
 
 const OutputPanel = ({inputNumber}:{ inputNumber: string }) => {
     const [tabPosition, setTabPosition] = useState<number|false>(false);
@@ -13,7 +14,7 @@ const OutputPanel = ({inputNumber}:{ inputNumber: string }) => {
     }
     useEffect(() => {
         if(tabPosition === 0) {
-            setTabData('For english');
+            setTabData(processENG(inputNumber));
         }
         if(tabPosition === 1) {
             setTabData(processUA(inputNumber));
@@ -31,7 +32,7 @@ const OutputPanel = ({inputNumber}:{ inputNumber: string }) => {
             <Box >
                 <div role="tabpanel" >
                     <Typography sx={{paddingTop: 3, paddingLeft: 2}}>
-                        {tabData}
+                        { tabData }
                     </Typography>
                 </div>
             </Box>
