@@ -73,6 +73,7 @@ const processENG = (input: string) => {
     while(length > 0) {
         if(length > 13) {
             result = 'Out of range';
+            break;
         } else {
             initDigit([9, 15], 'billion ', 10);
             initDigit([6, 10], 'million ', 7);
