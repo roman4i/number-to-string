@@ -23,7 +23,7 @@ function App() {
       <PageTitle />
       <NumberInput setNumber={ setNumber } />
       <Divider />
-      <OutputPanel />
+      <OutputPanel inputNumber={ number } />
     </Box>
   );
 }
